@@ -10,7 +10,8 @@ Scenario: Sell one product
     When I sell Bread with quantity 2
     Then The quantity of Bread product should be 8
 
-#Scenario: Buy multiple products
-#    When I buy Bread with quantity 2
-#    And I buy Jam with quantity 1
-#    Then total should be 121.00
+Scenario: Sell multiple products
+    When I sell Bread with quantity 5
+    And I sell Jam with quantity 1
+    Then The quantity of Bread product should be 5
+    And The quantity of Jam product should be 6
