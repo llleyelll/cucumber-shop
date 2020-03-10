@@ -18,4 +18,12 @@ public class ProductCatalog {
     public Product getProduct(String name) {
         return products.get(name);
     }
+
+    public void addQuantity(String name, int quantity) {
+        products.get(name).setQuantity(quantity);
+    }
+
+    public boolean itemAvaliable(String name, int quantity) {
+        return products.get(name).getQuantity() >= quantity;
+    }
 }
